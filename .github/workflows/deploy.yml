@@ -25,16 +25,16 @@ jobs:
           ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
       - name: Copy Files to Remote Server
         run: |
-          rsync -avz --exclude=".git" -e "ssh -p ${{ secrets.SERVER_PORT }}" ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:~/web-deploy/
+          rsync -avz --exclude=".git" -e "ssh -p ${{ secrets.SERVER_PORT }}" ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:~/resume/
       - name: Deploy Application on Remote Server
         run: |-
           ssh -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-          cd ~/web-deploy
-          docker stop mudzinga-course || true
-          docker rm mudzinga-course || true
+          cd ~/resume
+          docker stop resume || true
+          docker rm resume || true
 
-          docker build -t mudzinga-course:latest .
+          docker build -t resume:latest .
 
           # Run the new container
-          docker run -d --name mudzinga-course -p 2307:80 mudzinga-course
+          docker run -d --name resume -p 2006:80 resume
           EOF
