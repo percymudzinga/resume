@@ -1,0 +1,40 @@
+name: Docker Build and Deploy
+# Define when the workflow should run
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+# Define the jobs
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+      - name: Add server to known_hosts
+        run: |
+          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+      - name: Copy Files to Remote Server
+        run: |
+          rsync -avz --exclude=".git" -e "ssh -p ${{ secrets.SERVER_PORT }}" ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:~/web-deploy/
+      - name: Deploy Application on Remote Server
+        run: |-
+          ssh -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
+          cd ~/web-deploy
+          docker stop mudzinga-course || true
+          docker rm mudzinga-course || true
+
+          docker build -t mudzinga-course:latest .
+
+          # Run the new container
+          docker run -d --name mudzinga-course -p 2307:80 mudzinga-course
+          EOF

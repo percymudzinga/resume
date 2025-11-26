@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perseverance Mudzinganyama - Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      * {
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      @media print {
+        body {
+          background-color: white !important;
+        }
+        .section {
+          page-break-before: always;
+          break-before: page;
+        }
+
+        /* Don't break before the first section */
+        .section:first-child {
+          page-break-before: auto;
+        }
+
+        /* Optional: Ensure sections don't break internally */
+        .section {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+
+        .no-print {
+          display: none;
+        }
+        .top-header {
+          padding-top: 0px;
+        }
+        .no-shadow {
+          box-shadow: none !important;
+        }
+        .p-8 {
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+        .p-z {
+          padding-left: 2rem !important;
+          padding-right: 2rem !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <div
+      class="max-w-5xl mx-auto bg-white shadow-2xl my-8 rounded-lg overflow-hidden no-shadow"
+    >
+      <!-- Header Section -->
+      <div
+        class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 relative overflow-hidden top-header p-z"
+      >
+        <div
+          class="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-purple-500 opacity-20 rounded-full"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 -mb-16 -ml-16 w-48 h-48 bg-indigo-500 opacity-20 rounded-full"
+        ></div>
+        <div class="relative z-10">
+          <h1 class="text-4xl font-bold mb-2 tracking-tight">
+            Perseverance Mudzinganyama
+          </h1>
+          <p class="text-xl font-medium mb-4 text-indigo-100">
+            Senior Full-Stack Software Engineer
+          </p>
+          <div class="flex flex-wrap gap-4 text-sm">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Harare, Zimbabwe</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-phone"></i>
+              <span>+263 773 987 147</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-envelope"></i>
+              <a
+                href="mailto:percy@mudzinga.net"
+                class="hover:text-indigo-200 transition-colors"
+                >percy@mudzinga.net</a
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fab fa-linkedin"></i>
+              <a
+                href="https://www.linkedin.com/in/percy-mudzinga/"
+                class="hover:text-indigo-200 transition-colors"
+                >LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-8">
+        <!-- Professional Summary -->
+        <section class="mb-8">
+          <h2
+            class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-indigo-500 pb-2"
+          >
+            Professional Summary
+          </h2>
+          <p class="text-gray-700 leading-relaxed">
+            Accomplished Full-Stack Software Engineer with nearly a decade of
+            expertise in architecting and delivering enterprise-grade web and
+            mobile applications. Specialized in modern JavaScript ecosystems
+            including
+            <span class="font-semibold text-indigo-600"
+              >React, Vue.js, Angular</span
+            >, and cross-platform mobile development with
+            <span class="font-semibold text-indigo-600">Flutter</span> and
+            <span class="font-semibold text-indigo-600">React Native</span>.
+            Proven track record of leading development teams, implementing
+            scalable microservices architectures with
+            <span class="font-semibold text-indigo-600">Node.js</span> and
+            <span class="font-semibold text-indigo-600">Spring Boot</span>, and
+            delivering high-impact solutions that drive business growth.
+            Passionate about clean code, agile methodologies, and mentoring
+            junior developers.
+          </p>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="mb-8">
+          <h2
+            class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-indigo-500 pb-2"
+          >
+            Technical Expertise
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 skills-grid">
+            <div
+              class="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-200"
+            >
+              <h3
+                class="font-semibold text-indigo-700 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-mobile-alt text-indigo-500"></i>
+                Mobile Development
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Flutter</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >React Native</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >iOS</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Android</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg border border-purple-200"
+            >
+              <h3
+                class="font-semibold text-purple-700 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-laptop-code text-purple-500"></i>
+                Frontend Development
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Vue.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Angular</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >TailwindCSS</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-lg border border-green-200"
+            >
+              <h3
+                class="font-semibold text-green-700 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-server text-green-500"></i>
+                Backend Development
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Go</span
+                >
+
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Express.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Nest.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Rust</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Spring Boot</span
+                >
+
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >REST APIs</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border border-blue-200"
+            >
+              <h3
+                class="font-semibold text-blue-700 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-tools text-blue-500"></i>
+                DevOps & Tools
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Docker</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >AWS</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >MongoDB</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >MySQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm skill-badge"
+                  >Git</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="mb-8 section">
+          <h2
+            class="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-indigo-500 pb-2"
+          >
+            Professional Experience
+          </h2>
+
+          <div class="space-y-6">
+            <!-- BetterDesign -->
+            <div
+              class="border-l-4 border-indigo-500 pl-6 hover:border-indigo-600 transition-colors experience-item"
+            >
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Full-Stack JavaScript Developer
+                  </h3>
+                  <p class="text-indigo-600 font-semibold">BetterDesign</p>
+                </div>
+                <span
+                  class="text-gray-500 text-sm font-medium bg-gray-100 px-3 py-1 rounded-full date-badge"
+                  >Aug 2023 - Feb 2025</span
+                >
+              </div>
+              <ul class="text-gray-700 space-y-2 mt-3">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-indigo-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Architected and deployed scalable microservices solutions
+                    for UK-based startups using Express.js and Nest.js</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-indigo-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Developed cross-platform mobile applications with Flutter
+                    and React Native, achieving 4.8+ app store ratings</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-indigo-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Integrated complex payment systems including Stripe Connect
+                    and implemented full-text search with MeiliSearch</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-indigo-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Led deployment strategies on Digital Ocean and Vercel,
+                    reducing infrastructure costs</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-3">
+                <span class="text-sm text-gray-600 font-medium"
+                  >Key Projects:</span
+                >
+                <span class="text-sm text-gray-700">
+                  GoCatchFish • GetAhead Mindset • In Good Company • MyPTA •
+                  Goodmine</span
+                >
+              </div>
+            </div>
+
+            <!-- Qubedlab -->
+            <div
+              class="border-l-4 border-purple-500 pl-6 hover:border-purple-600 transition-colors experience-item"
+            >
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Senior Flutter Developer & Team Lead
+                  </h3>
+                  <p class="text-purple-600 font-semibold">Qubedlab</p>
+                </div>
+                <span
+                  class="text-gray-500 text-sm font-medium bg-gray-100 px-3 py-1 rounded-full date-badge"
+                  >Nov 2020 - Mar 2023</span
+                >
+              </div>
+              <ul class="text-gray-700 space-y-2 mt-3">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-purple-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Led a team of 5 developers in building enterprise
+                    automotive dealership platform for US market</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-purple-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Implemented BLOC Architecture for state management,
+                    improving app performance</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-purple-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Developed custom Java plugins and integrated Twilio for
+                    real-time voice communication features</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-purple-500 mt-1 text-xs"
+                  ></i>
+                  <span>Built Spring Boot microservices</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Watumirahere -->
+            <div
+              class="border-l-4 border-green-500 pl-6 hover:border-green-600 transition-colors experience-item"
+            >
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Full-Stack Developer
+                  </h3>
+                  <p class="text-green-600 font-semibold">Watumirahere</p>
+                </div>
+                <span
+                  class="text-gray-500 text-sm font-medium bg-gray-100 px-3 py-1 rounded-full date-badge"
+                  >Sep 2020 - Current</span
+                >
+              </div>
+              <ul class="text-gray-700 space-y-2 mt-3">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-green-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Single-handedly architected and deployed complete
+                    E-commerce platform with Node.js, Vue.js admin dashboard,
+                    and Flutter mobile app</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-green-500 mt-1 text-xs"
+                  ></i>
+                  <span>Developed WhatsApp commerce bot using Twilio API</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- ZimEduConnect -->
+            <div
+              class="border-l-4 border-blue-500 pl-6 hover:border-blue-600 transition-colors experience-item"
+            >
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Full-Stack Developer
+                  </h3>
+                  <p class="text-blue-600 font-semibold">
+                    ZimEduConnect (Ministry of Primary & Secondary Education)
+                  </p>
+                </div>
+                <span
+                  class="text-gray-500 text-sm font-medium bg-gray-100 px-3 py-1 rounded-full date-badge"
+                  >May 2019 - Mar 2021</span
+                >
+              </div>
+              <ul class="text-gray-700 space-y-2 mt-3">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-blue-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Developed UNESCO-supported Open Educational Resources
+                    platform</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-blue-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Built responsive web platform with Node.js and MongoDB, and
+                    companion Flutter mobile app</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- uDigital -->
+            <div
+              class="border-l-4 border-orange-500 pl-6 hover:border-orange-600 transition-colors experience-item section"
+            >
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Frontend Developer
+                  </h3>
+                  <p class="text-orange-600 font-semibold">uDigital</p>
+                </div>
+              </div>
+              <ul class="text-gray-700 space-y-2 mt-3">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-orange-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Developed internal nominations platform for Development
+                    Bank of Southern Africa (DBSA)</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fas fa-chevron-right text-orange-500 mt-1 text-xs"
+                  ></i>
+                  <span
+                    >Built modern responsive website for NBCRFLI
+                    (https://www.nbcrfli.org.za)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notable Projects -->
+        <section class="mb-8">
+          <h2
+            class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-indigo-500 pb-2"
+          >
+            Notable Projects & Achievements
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="bg-gradient-to-br from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-200"
+            >
+              <h3 class="font-bold text-indigo-700 mb-2">
+                Enterprise Inventory System
+              </h3>
+              <p class="text-gray-700 text-sm">
+                Developed complete POS and accounting solution at mudzinga.net,
+                successfully deployed in production environment
+              </p>
+            </div>
+            <div
+              class="bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-lg border border-purple-200"
+            >
+              <h3 class="font-bold text-purple-700 mb-2">
+                Promotions Platform (2020)
+              </h3>
+              <p class="text-gray-700 text-sm">
+                Co-founded retail promotions startup, architecting full-stack
+                solution with Flutter, Express.js, and Vue.js
+              </p>
+            </div>
+            <div
+              class="bg-gradient-to-br from-green-50 to-teal-50 p-4 rounded-lg border border-green-200"
+            >
+              <h3 class="font-bold text-green-700 mb-2">ZiUber (2018)</h3>
+              <p class="text-gray-700 text-sm">
+                Pioneered ride-sharing application for Zimbabwe using Flutter,
+                Firebase, and Google Maps integration
+              </p>
+            </div>
+            <div
+              class="bg-gradient-to-br from-blue-50 to-cyan-50 p-4 rounded-lg border border-blue-200"
+            >
+              <h3 class="font-bold text-blue-700 mb-2">SpeakZW (2018)</h3>
+              <p class="text-gray-700 text-sm">
+                Built civic tech platform for election information, supported by
+                Gender and Media Connect & MISA Zimbabwe
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="text-center pt-6 border-t border-gray-200 print-footer">
+          <p class="text-gray-500 text-sm">References available upon request</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Print Button -->
+    <div class="text-center mb-8 no-print">
+      <button
+        onclick="window.print()"
+        class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors shadow-lg"
+      >
+        <i class="fas fa-print mr-2"></i> Print Resume
+      </button>
+    </div>
+  </body>
+</html>
